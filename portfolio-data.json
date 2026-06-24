@@ -1,0 +1,90 @@
+{
+  "personal": {
+    "name": "Abbas Mohamed",
+    "title": "Aeronautical & Mechanical Engineering Portfolio",
+    "email": "abbaskmta@gmail.com",
+    "phone": "+91 8870036496",
+    "location": "Pudukkottai, Tamil Nadu, India",
+    "resumeLink": "assets/Abbas_Mohamed_Resume.pdf",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  "skills": [
+    "AutoCAD 2D", "SolidWorks", "NX Siemens", "Fusion 360",
+    "Ansys Workbench", "COMSOL Multiphysics", "Ansys STK",
+    "Windchill PLM", "Teamcenter", "Python with Machine Learning",
+    "C Language", "SQL", "Power BI", "Microsoft Excel", "PowerPoint", "Word",
+    "Rapport Building", "Stakeholder Management", "Emotional Intelligence", "Resilience"
+  ],
+  "trainings": [
+    { "title": "Data Analytics for Manufacturing", "provider": "TVS Training and Services Ltd", "date": "March 2024" },
+    { "title": "Product Lifecycle Management Windchill", "provider": "Sumedhas Tech Solutions", "date": "October 2024" },
+    { "title": "FIP - Fuel Injection Pump", "provider": "BOSCH Training Lab", "date": "October 2023" },
+    { "title": "KTS - Vehicle Diagnosis System", "provider": "BOSCH Training Lab", "date": "October 2023" }
+  ],
+  "education": [
+    { "degree": "Master of Engineering in Aeronautical Engineering", "school": "Madras Institute of Technology, Anna University, Chennai", "timeline": "Sep 2025 - Jun 2027", "metrics": "Current Progress — CGPA: 7.7" },
+    { "degree": "Bachelor of Engineering in Mechanical Engineering", "school": "Rajalakshmi Engineering College, Anna University, Chennai", "timeline": "Oct 2021 - Apr 2025", "metrics": "Completed — CGPA: 8.5" },
+    { "degree": "International Indian School, Al - Jubail (KSA)", "school": "HSC & SSLC Track", "timeline": "Graduated 2021", "metrics": "HSC: 88.20% | SSLC: 78.40%" }
+  ],
+  "experience": [
+    {
+      "role": "Physical Functional Design & Integration – Engineering Trainee",
+      "company": "STELLANTIS FCA Engineering India Private Limited",
+      "timeline": "August 2024 – January 2025",
+      "location": "Thoraipakkam, Chennai",
+      "points": [
+        "Assisted in designing and validating physical components within vehicle systems, gaining hands-on experience with CAD modeling and simulation studies.",
+        "Collaborated with cross-functional teams to understand the integration of mechanical, electrical, and software systems.",
+        "Developed knowledge of automotive design standards, manufacturing feasibility, and quality requirements."
+      ]
+    },
+    {
+      "role": "Lignite Handling System – Internship Trainee",
+      "company": "NLC India Limited, Thermal Power Station II Expansion",
+      "timeline": "June 2023",
+      "location": "Neyveli, Tamil Nadu",
+      "points": [
+        "Completed training on lignite extraction, crushing, transportation, and storage, gaining hands-on exposure to material-handling systems like conveyors, crushers, stackers, and reclaimers.",
+        "Observed industrial PLC/SCADA-driven automation layouts and learned plant safety protocols and environmental compliance."
+      ]
+    },
+    {
+      "role": "Refrigeration & Air Conditioning – Intern",
+      "company": "Spark Technical Services",
+      "timeline": "January 2023",
+      "location": "Tambaram Sanatorium, Chennai",
+      "points": [
+        "Gained theoretical proficiency in vapour-compression cycles and HVAC design via core components analysis.",
+        "Applied thermodynamics and gas-law principles to model/optimize refrigeration configurations and conducted systematic virtual troubleshooting of industrial AC units."
+      ]
+    }
+  ],
+  "projects": [
+    { "title": "Project N.E.S.A: Spatio-Temporal GNN & EHD Plasma Flight Control", "desc": "Served as R&D Lead developing a cyber-physical UAV flight control system pairing a PyTorch Geometric dual-headed Spatio-Temporal Graph Neural Network (50 nodes X 6 features) with high-voltage solid-state DBD plasma actuators. Validated via OpenFOAM and ANSYS CFD sweeps that active electro-fluidic momentum injection yields a 290% retention gain in aerodynamic lift-to-drag (L/D) efficiency across boundaries at 25–40 m/s.", "assetLink": "" },
+    { "title": "Thermodynamic Baffles for Aviation Liquid Hydrogen Tanks", "desc": "Engineered an internal G-10 CR fiberglass epoxy composite Thermal Dam to decouple mechanical slosh suppression from conductive heat transfer. Developed a 2D Volume of Fluid (VOF) multiphase model with Lee Phase Change mechanics in ANSYS Fluent to simulate take-off kinematics. Layout optimized to reduce transient impact forces by 75% and verified via 1-Way Fluid-Structure Interaction.", "assetLink": "" },
+    { "title": "Hybrid Digital Twin for Aero-Engine Bearing Prognostics", "desc": "Designed a deep-fusion Hybrid Digital Twin using a Stacked LSTM trained on a dual-path unified loss function embedding the Paris-Erdogan Law to reduce RMSE by 71%. Generated 200,000+ synthetic profiles via Monte Carlo simulation, validated framework via Transfer Learning on NASA IMS dataset, and optimized for an edge latency of 63.26 ms.", "assetLink": "" },
+    { "title": "Multi-Agent Aerodynamic Digital Twin & Physics-Informed Deep Learning", "desc": "Built an automated aerodynamic optimization pipeline in Python using a Genetic Algorithm and XFOIL viscous solver loop to parameterize an NREL S809 airfoil via Hicks-Henne shape functions. Trained a deep PyTorch MLP to achieve real-time geometric inversion, integrating Savitzky-Golay filtering for numerical stability.", "assetLink": "" },
+    { "title": "Aero-Scribe: Multi-Modal AI Agent for Optimized Aircraft Maintenance", "desc": "Architected a multi-modal, multi-agent AI system utilizing advanced Large Language Models integrated with Retrieval-Augmented Generation (RAG) to seamlessly parse and extract actionable insights from high-volume technical documentation and MRO logs. Implemented version control pipelines via GitHub.", "assetLink": "" },
+    { "title": "Compact, Self-Deploying Satellite for Space Debris Collection", "desc": "Developed a compact, self-deploying satellite architecture for space debris collection using a motorized Aerogel net and autonomous guidance. Integrated microcontrollers, sensors, and mechanical blades to capture debris in LEO, optimized for structural reusability and safe Earth re-entry.", "assetLink": "" },
+    { "title": "Design and Development of All-Terrain Vehicle BAJA SAEINDIA", "desc": "Collaborated in the design, simulation, fabrication, and testing of a hydrogen-compatible All-Terrain Vehicle (ATV) for the BAJA SAEINDIA H-BAJA competition. Optimized global mechanical, electrical, and thermal architectures for real-world dynamic event tracking.", "assetLink": "" },
+    { "title": "Multi-metal 3D Printing for Complex Components", "desc": "Developed a multi-metal 3D printing system capable of sequential and parallel deposition of Aluminum 6061, Copper C11000, and AISI 316L Stainless Steel using laser fusion. Integrated thermal monitoring arrays and nickel transition lines to block thermal shock boundaries.", "assetLink": "" },
+    { "title": "Swachh Smart: Smart Highway Amenities Database (NHAI Project)", "desc": "Conceptualized and built a centralized facility management database layer for the National Highways Authority of India (NHAI) using a Python backend and MariaDB. Engineered ingestion pipelines processing live IoT sensor inputs to deliver automated fault detection dashboards.", "assetLink": "" },
+    { "title": "Safe Journeys AI: The Walker App", "desc": "Designed an AI-powered personal safety network and mobile application transit tracker for students. Engineered predictive models for dynamic route safety scoring and real-time location mapping alongside custom path anomaly detection triggers.", "assetLink": "" },
+    { "title": "Development of Portable Water Sterilization Unit", "desc": "Designed and fabricated a zero-electricity, portable water sterilization system using friction-generated heat for emergency zones. Integrated multi-stage filtration loops with a copper cylinder friction mechanism drafted inside SolidWorks and verified via CNC physical fabrication.", "assetLink": "" },
+    { "title": "Determining Porosity of Rubber Products", "desc": "Developed a non-destructive testing method using ultrasonic sensors to detect internal manufacturing porosity inside rubber tires. System generated detailed C-scan visualizations from time-of-flight sensor data to completely replace traditional invasive testing methods.", "assetLink": "" },
+    { "title": "Advanced Pothole Detection and Mitigation System", "desc": "Designed a real-time tracking network utilizing LiDAR arrays, ultrasonic sensors, and 3D mapping integrated with Google Maps API to provide forward alerts to transit operators 30-40 meters in advance.", "assetLink": "" },
+    { "title": "Advanced Storage Unit for Tomatoes", "desc": "Designed an IoT-enabled, thermally controlled storage box using UV-C sterilization arrays, smart automated ethylene management filters, and activated charcoal systems to drastically extend agricultural transport life spans.", "assetLink": "" }
+  ],
+  "achievements": [
+    "Authored and published peer-reviewed deep learning research paper in the SAE International Research Journal (2026).",
+    "Awarded formal structural design patent for a novel, self-deploying Space Debris Collection Satellite configuration (2025).",
+    "Crowned regional Microsoft AI-Odyssey Champion for optimized cloud AI model distribution in Bangalore.",
+    "Selected as top regional finalist in the ICT Academy Youth Talk platform for technical presentation excellence."
+  ],
+  "certifications": [
+    "Joining Technologies for Metals (Oct 2024)",
+    "Social Innovation and Industry 4.0 (Oct 2023)",
+    "Product Design and Manufacturing (Apr 2023)"
+  ]
+}

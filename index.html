@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abbas Mohamed | Engineering Portfolio Matrix</title>
+    <link href="https://fonts.googleapis.com/css2 family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            --glass-card: rgba(255, 255, 255, 0.81);
+            --glass-border: rgba(255, 255, 255, 0.6);
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --pastel-blue: #6366f1;
+            --pastel-teal: #0d9488;
+            --pastel-purple: #8b5cf6;
+            --tag-bg: rgba(99, 102, 241, 0.06);
+            --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            min-height: 100vh;
+            padding-bottom: 5rem;
+        }
+
+        #portfolio-dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        header { text-align: center; margin-bottom: 4rem; }
+        header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--text-primary); }
+        header p { color: var(--pastel-blue); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; margin-top: 0.5rem; }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 950px) { .dashboard-grid { grid-template-columns: 1fr; } }
+
+        .glass-panel {
+            background: var(--glass-card);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            padding: 2.2rem;
+            border-radius: 22px;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .glass-panel h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid rgba(0,0,0,0.03);
+            padding-bottom: 0.5rem;
+        }
+
+        .info-node {
+            background: rgba(255,255,255,0.4);
+            padding: 0.75rem 1rem;
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            border: 1px solid rgba(255,255,255,0.5);
+            display: block;
+            text-decoration: none;
+        }
+        
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .clean-tag {
+            background: var(--tag-bg);
+            color: var(--pastel-blue);
+            padding: 0.35rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.15);
+        }
+
+        .timeline-box {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid rgba(99, 102, 241, 0.2);
+        }
+        .timeline-box h4 { font-size: 1.2rem; color: var(--text-primary); font-weight: 600; }
+        .timeline-box h5 { color: var(--pastel-teal); margin-bottom: 0.5rem; font-weight: 500; font-size: 0.95rem; }
+        .timeline-box p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+        .timeline-box ul { margin-left: 1.25rem; margin-top: 0.5rem; color: var(--text-secondary); font-size: 0.95rem; }
+        .timeline-box li { margin-bottom: 0.4rem; line-height: 1.5; }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 1.75rem;
+            border-radius: 14px;
+            margin-bottom: 1.5rem;
+        }
+        .project-card h4 { color: var(--text-primary); margin-bottom: 0.6rem; font-size: 1.2rem; font-weight: 600; }
+        .project-card p { line-height: 1.6; font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.5rem;}
+        
+        .asset-btn {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: var(--pastel-blue);
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.5);
+            transition: all 0.2s;
+        }
+        .asset-btn:hover { background: var(--pastel-blue); color: white; }
+        
+        .loading { text-align: center; padding: 10rem; font-size: 1.2rem; color: var(--pastel-blue); font-weight: 600; }
+    </style>
+</head>
+<body>
+
+    <div id="loading-state" class="loading">Loading Portfolio Engineering Engine...</div>
+
+    <main id="portfolio-dashboard" style="display: none;">
+        <header>
+            <h1 id="user-name"></h1>
+            <p id="user-comms"></p>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="side-col">
+                <div class="glass-panel">
+                    <h2>Identity & Contact</h2>
+                    <div id="contact-panel"></div>
+                </div>
+                <div class="glass-panel">
+                    <h2>Technical Skills</h2>
+                    <div id="skills-panel" class="tag-cloud"></div>
+                </div>
+                <div class="glass-panel">
+                    <h2>Specialized Trainings</h2>
+                    <div id="trainings-panel" style="font-size:0.95rem; color: var(--text-secondary); line-height: 1.6;"></div>
+                </div>
+                <div class="glass-panel">
+                    <h2>Key Achievements</h2>
+                    <div id="achievements-panel" style="font-size:0.95rem; color: var(--text-secondary); line-height: 1.6;"></div>
+                </div>
+                <div class="glass-panel">
+                    <h2>NPTEL Certifications</h2>
+                    <div id="certifications-panel" style="font-size:0.95rem; color: var(--text-secondary); line-height: 1.6;"></div>
+                </div>
+            </div>
+
+            <div class="main-col">
+                <div class="glass-panel">
+                    <h2>Professional Experience</h2>
+                    <div id="experience-panel"></div>
+                </div>
+
+                <div class="glass-panel">
+                    <h2>Education Track</h2>
+                    <div id="education-panel"></div>
+                </div>
+
+                <div class="glass-panel">
+                    <h2>Research & Engineering Projects</h2>
+                    <div id="projects-panel"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('portfolio-data.json')
+                .then(response => {
+                    if (!response.ok) throw new Error("Failed to load JSON data configuration file.");
+                    return response.json();
+                })
+                .then(data => buildInterface(data))
+                .catch(err => {
+                    document.getElementById('loading-state').innerText = "Initialization Error: " + err.message;
+                });
+        });
+
+        function buildInterface(data) {
+            // Bind Headings
+            document.getElementById('user-name').innerText = data.personal.name;
+            document.getElementById('user-comms').innerText = data.personal.title;
+
+            // Identity Frame
+            let contactHTML = `
+                <div class="info-node">✉️ ${data.personal.email}</div>
+                <div class="info-node">📞 ${data.personal.phone}</div>
+                <div class="info-node">📍 ${data.personal.location}</div>
+            `;
+            if(data.personal.resumeLink) {
+                contactHTML += `<a href="${data.personal.resumeLink}" target="_blank" class="info-node" style="background: rgba(99,102,241,0.1); border-color: rgba(99,102,241,0.3); font-weight:600; text-align:center; color: var(--pastel-blue);">📄 View Prebuilt Resume PDF</a>`;
+            }
+            document.getElementById('contact-panel').innerHTML = contactHTML;
+
+            // Skills Frame
+            document.getElementById('skills-panel').innerHTML = data.skills.map(skill => `<span class="clean-tag">${skill}</span>`).join('');
+
+            // Trainings Frame
+            document.getElementById('trainings-panel').innerHTML = data.trainings.map(t => `
+                <div style="margin-bottom: 0.8rem;"><strong>• ${t.title}</strong><br><span style="color:#64748b; font-size:0.85rem;">${t.provider} (${t.date})</span></div>
+            `).join('');
+
+            // Achievements Frame
+            document.getElementById('achievements-panel').innerHTML = data.achievements.map(a => `<div style="margin-bottom:0.6rem;">• ${a}</div>`).join('');
+
+            // Certifications Frame
+            document.getElementById('certifications-panel').innerHTML = data.certifications.map(c => `<div style="margin-bottom:0.5rem;">• ${c}</div>`).join('');
+
+            // Education Frame
+            document.getElementById('education-panel').innerHTML = data.education.map(e => `
+                <div class="timeline-box">
+                    <h4>${e.degree}</h4>
+                    <h5>${e.school}</h5>
+                    <p>${e.timeline} | ${e.metrics}</p>
+                </div>
+            `).join('');
+
+            // Experience Frame
+            document.getElementById('experience-panel').innerHTML = data.experience.map(exp => `
+                <div class="timeline-box">
+                    <h4>${exp.role}</h4>
+                    <h5>${exp.company}</h5>
+                    <h5>${exp.timeline} | ${exp.location}</h5>
+                    <ul>${exp.points.map(pt => `<li>${pt}</li>`).join('')}</ul>
+                </div>
+            `).join('');
+
+            // Complex Projects Framework Engine 
+            document.getElementById('projects-panel').innerHTML = data.projects.map(proj => `
+                <div class="project-card">
+                    <h4>${proj.title.toUpperCase()}</h4>
+                    <p>${proj.desc}</p>
+                    ${proj.assetLink ? `<a href="${proj.assetLink}" target="_blank" class="asset-btn">🔗 View Project Documentation Asset</a>` : ''}
+                </div>
+            `).join('');
+
+            // Flip Visibility states
+            document.getElementById('loading-state').style.display = 'none';
+            document.getElementById('portfolio-dashboard').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
